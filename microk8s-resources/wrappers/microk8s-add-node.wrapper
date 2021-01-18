@@ -67,7 +67,9 @@ all_ips="$(get_ips)"
 
 echo "From the node you wish to join to this cluster, run the following:"
 echo "microk8s join ${default_ip}:$port/${token}"
-echo ""
+echo "**********"
+echo "  ******---------------------"
+echo "    **-----------------------"
 echo "If the node you are adding is not reachable through the default interface you can use one of the following:"
 for addr in $(echo "${all_ips}"); do
   if ! [[ $addr == *":"* ]]; then
